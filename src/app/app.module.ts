@@ -8,16 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeroesModule
   ],
   declarations: [
     AppComponent,
-    HeroListComponent,
     CrisisListComponent,
     PageNotFoundComponent
   ],
