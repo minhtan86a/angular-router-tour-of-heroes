@@ -8,8 +8,8 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 //RouterModule.forRoot() in the root AppRoutingModule
 //RouterModule.forChild() method to register additional routes.
 const routes: Routes = [
-  { path: 'heroes',  component: HeroListComponent },
-  { path: 'hero/:id', component: HeroDetailComponent }
+  { path: 'heroes',  component: HeroListComponent, data: { animation: 'heroes' } },
+  { path: 'hero/:id', component: HeroDetailComponent, data: { animation: 'hero' } }
 ];
 
 @NgModule({
