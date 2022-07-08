@@ -10,12 +10,14 @@ import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
 
+//The order of route configuration is important because the router accepts the first route that matches a navigation request path.
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    HeroesModule
+    HeroesModule,
+    AppRoutingModule
+    
   ],
   declarations: [
     AppComponent,
