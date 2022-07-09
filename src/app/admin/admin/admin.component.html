@@ -1,0 +1,18 @@
+<h2>Admin</h2>
+<nav>
+		<!-- [routerLinkActiveOptions]="{ exact: true }", marks the ./ link as active when the user navigates to the /admin URL and not when navigating to any of the child routes.-->
+	<a 
+		routerLink="./" 
+		routerLinkActive="active"
+		[routerLinkActiveOptions]="{ exact: true }" 
+		ariaCurrentWhenActive="page">Dashboard</a>
+	<a 
+		routerLink="./crises" 
+		routerLinkActive="active" 
+		ariaCurrentWhenActive="page">Manage Crises</a>
+	<a 
+		routerLink="./heroes" 
+		routerLinkActive="active" 
+		ariaCurrentWhenActive="page">Manage Heroes</a>
+</nav>
+<router-outlet></router-outlet>

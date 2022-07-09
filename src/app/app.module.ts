@@ -1,3 +1,4 @@
+import { AdminModule } from './admin/admin.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
     BrowserAnimationsModule,
     HeroesModule,
     CrisisCenterModule,
+    AdminModule,
     AppRoutingModule
     
   ],
