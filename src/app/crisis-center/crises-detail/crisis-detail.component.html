@@ -7,11 +7,11 @@
   </div>
 </div> -->
 
-<h2>Heroes</h2>
+<h2>Crisis</h2>
 <div *ngIf="crisis$ | async as crisis">
   <h3>{{ crisis.name }}</h3>
   <p>Id: {{ crisis.id }}</p>
   <label for="crisis-name">Crisis name: </label>
   <input type="text" id="crisis-name" [(ngModel)]="crisis.name" placeholder="name"/>
-  <button type="button" (click)="gotoHeroes(crisis)">Back</button>
+  <button type="button" (click)="gotoCrises(crisis)">Back</button>
 </div>

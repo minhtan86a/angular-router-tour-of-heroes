@@ -6,7 +6,7 @@ import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
-  selector: 'app-hero-detail',
+  selector: 'app-crisis-detail',
   templateUrl: './crisis-detail.component.html',
   styleUrls: ['./crisis-detail.component.css']
 })
@@ -34,12 +34,15 @@ export class CrisisDetailComponent implements OnInit {
     );
   }
 
-  gotoHeroes(crisis: Crisis) {
+  gotoCrises(crisis: Crisis) {
     const crisisId = crisis ? crisis.id : null;
     // Pass along the hero id if available
     // so that the HeroList component can select that hero.
     // Include a junk 'foo' property for fun.
-    this.router.navigate(['/crises', { id: crisisId, foo: 'foo' }]);
+    //this.router.navigate(['/crisis-center', { id: crisisId, foo: 'foo' }]);
+
+    // Relative navigation back to the crises
+    this.router.navigate(['../', { id: crisisId, foo: 'foo' }], { relativeTo: this.route });
   }
 
 }
