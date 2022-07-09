@@ -20,14 +20,17 @@ const crisisCenterRoutes: Routes = [
       {
         path: '',
         component: CrisisListComponent,
+        //data: { animation: 'crisis-center' },
         children: [
           {
             path: ':id',
-            component: CrisisDetailComponent
+            component: CrisisDetailComponent,
+            data: { animation: 'crisis' }, //'crises <= crisis'
           },
           {
             path: '',
-            component: CrisisCenterHomeComponent
+            component: CrisisCenterHomeComponent,
+            data: { animation: 'crises' }, //'crises => crisis'
           }
         ]
       }

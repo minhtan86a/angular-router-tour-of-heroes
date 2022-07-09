@@ -1,15 +1,18 @@
+
 import { Crisis } from '../crisis';
 import { Component, OnInit } from '@angular/core';
 
 import { CrisesService } from '../crises.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ChildrenOutletContexts } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { slideInAnimationCrisis } from 'src/app/animations-crisis';
 
 @Component({
   selector: 'app-crisis-list',
   templateUrl: './crisis-list.component.html',
-  styleUrls: ['./crisis-list.component.css']
+  styleUrls: ['./crisis-list.component.css'],
+  animations: [ slideInAnimationCrisis ]
 })
 export class CrisisListComponent implements OnInit {
 
@@ -21,8 +24,9 @@ export class CrisisListComponent implements OnInit {
 
   constructor(
     private crisisService: CrisesService, 
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
     //private messageService: MessageService
+    private contexts: ChildrenOutletContexts
     ) { }
 
   ngOnInit(): void {
@@ -33,6 +37,10 @@ export class CrisisListComponent implements OnInit {
         return this.crisisService.getCrises();
       })
     )
+  }
+
+  getAnimationData() {
+      return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
 
 }

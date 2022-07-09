@@ -10,5 +10,8 @@
 
 <button type="button" routerLink="/sidekicks">Go to sidekicks</button>
 
-<router-outlet></router-outlet>
 
+<!-- Wrap the  <router-outlet></router-outlet> for animation-->
+<div [@routeAnimationCrisis]="getAnimationData()">
+  <router-outlet></router-outlet>
+</div>
