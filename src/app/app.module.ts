@@ -1,4 +1,4 @@
-import { AdminModule } from './admin/admin.module';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 //The order of route configuration is important because the router accepts the first route that matches a navigation request path.
 @NgModule({
@@ -20,12 +22,14 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
     HeroesModule,
     CrisisCenterModule,
     AdminModule,
+    AuthModule,
     AppRoutingModule
     
   ],
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+
   ],
   bootstrap: [ AppComponent ]
 })

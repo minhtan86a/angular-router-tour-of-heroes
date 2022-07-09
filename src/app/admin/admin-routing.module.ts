@@ -1,3 +1,4 @@
+import { AuthGuard } from './../auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -9,6 +10,7 @@ const adminRoutes: Routes = [
 	{
 		path: 'admin',
 		component: AdminComponent,
+		canActivate: [AuthGuard],
 		children: [
 			{
 				//The child route under the AdminComponent has a path and a children property but it's not using a component. This defines a component-less route.
