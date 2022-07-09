@@ -1,0 +1,17 @@
+<!-- <div *ngIf="hero$">
+  <h2>{{hero$.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero$.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero$.name" placeholder="name"/>
+  </div>
+</div> -->
+
+<h2>Heroes</h2>
+<div *ngIf="crisis$ | async as crisis">
+  <h3>{{ crisis.name }}</h3>
+  <p>Id: {{ crisis.id }}</p>
+  <label for="crisis-name">Crisis name: </label>
+  <input type="text" id="crisis-name" [(ngModel)]="crisis.name" placeholder="name"/>
+  <button type="button" (click)="gotoHeroes(crisis)">Back</button>
+</div>

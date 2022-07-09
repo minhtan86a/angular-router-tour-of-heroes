@@ -1,0 +1,26 @@
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
+import { CrisisDetailComponent } from './crises-detail/crisis-detail.component';
+import { FormsModule } from '@angular/forms';
+import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
+import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
+import { CrisisListComponent } from './crises-list/crisis-list.component';
+
+
+@NgModule({
+  declarations: [
+    CrisisListComponent,
+    CrisisDetailComponent,
+    CrisisCenterComponent,
+    CrisisCenterHomeComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    CrisisCenterRoutingModule
+  ]
+})
+export class CrisisCenterModule { }

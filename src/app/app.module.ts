@@ -6,9 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 
 //The order of route configuration is important because the router accepts the first route that matches a navigation request path.
 @NgModule({
@@ -17,12 +17,12 @@ import { HeroesModule } from './heroes/heroes.module';
     FormsModule,
     BrowserAnimationsModule,
     HeroesModule,
+    CrisisCenterModule,
     AppRoutingModule
     
   ],
   declarations: [
     AppComponent,
-    CrisisListComponent,
     PageNotFoundComponent
   ],
   bootstrap: [ AppComponent ]
