@@ -15,6 +15,7 @@ const adminRoutes: Routes = [
 			{
 				//The child route under the AdminComponent has a path and a children property but it's not using a component. This defines a component-less route.
 				path: '',
+				canActivateChild: [AuthGuard],
 				children: [
 					{ path: 'crises', component: ManageCrisesComponent },
 					{ path: 'heroes', component: ManageHeroesComponent },
