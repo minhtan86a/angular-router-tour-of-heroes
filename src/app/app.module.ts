@@ -12,6 +12,7 @@ import { HeroesModule } from './heroes/heroes.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 //The order of route configuration is important because the router accepts the first route that matches a navigation request path.
 @NgModule({
@@ -29,6 +30,7 @@ import { AuthModule } from './auth/auth.module';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    ComposeMessageComponent,
 
   ],
   bootstrap: [ AppComponent ]
